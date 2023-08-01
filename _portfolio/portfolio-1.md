@@ -1,6 +1,6 @@
 ---
-title: "Portfolio item number 1"
-excerpt: "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
+title: "Advancing Diabetic Retinopathy Detection: Fine-Tuning VIT Models"
+excerpt: "This work focuses on advancing the detection of diabetic retinopathy through the implementation of Vision Transformer (ViT) models, as state-of-the-art deep learning approach to computer vision.<br/><img src='/images/Retinopathy.png'>"
 collection: portfolio
 ---
 
