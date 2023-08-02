@@ -40,3 +40,12 @@ In the model selection phase, we rigorously experimented with various regression
 
 Model Resules:
 <img src="/images/models_results.png">
+
+<h2>LLM to extract data from user messages</h2>
+
+In our project, we aimed to develop an intelligent and interactive system capable of extracting relevant data from users' messages to enhance the user experience. For this purpose, we initially integrated the "LLM" (Language Model for Message Extraction), a custom-built language model tailored to efficiently extract specific information from user inputs. However, as our project progressed, we explored other language models to optimize data extraction further. We experimented with "LLAMA," "FALCON," and finally, the powerful "ChatGPT-3.5 Turbu API" developed by OpenAI. Each model offered unique strengths, but ultimately, we found that the ChatGPT-3.5 Turbu API provided the most robust and accurate data extraction capabilities.
+
+In our project, we strived to develop a comprehensive and adaptable system that accommodates various user inputs. To ensure the robustness of our data processing pipeline, we encountered situations where users might not have entered all the required training features. In such cases, we implemented the "K-Nearest Neighbors" (KNN) algorithm to fill in the missing values effectively. KNN is a reliable and simple imputation technique that estimates missing feature values based on the values of neighboring data points in the dataset.
+
+Use prompt engineering to communicate with users:
+<img src="/images/LLM.png">
