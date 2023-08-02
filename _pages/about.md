@@ -27,3 +27,13 @@ Education Career
   <span style="font-size: 12px;">Aug. 2022 – current students</span>
 </div>
 </div>
+
+First year:
+<ul>
+  <li>Introduction to AI and Data Science</li>
+  <li>Data Analysis</li>
+  <li>Data bases such as SQL (Oracle) NoSQL (aws simpleDB, MongoDB, firebase)</li>
+  <li>Data mining</li>
+  <li>Web technology with Java EE and Flask</li>
+  <li>Data security</li>
+</ul>
