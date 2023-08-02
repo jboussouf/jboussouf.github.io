@@ -17,7 +17,6 @@ In order to simplify the classification task and streamline the analysis process
     <li>1 - Mild : This class combines the original "Mild" and "Moderate" classes. Images in this class exhibit mild to moderate signs of diabetic retinopathy, representing the initial and intermediate stages of the condition</li>
     <li>2 - Proliferative : This class combines the original "Severe" and "Proliferative DR" classes. Images in this class depict severe manifestations of diabetic retinopathy, indicating an advanced stage of the disease and the potential for vision loss.</li>
 </ul>
-
+Distribution of the Dataset after compression:
 <img src='/images/Tsne_visualization.png'>
-<p style="text-align: center">Distribution of the Dataset after compression</p>
 
