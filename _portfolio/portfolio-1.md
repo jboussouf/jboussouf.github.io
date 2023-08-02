@@ -19,7 +19,7 @@ In order to simplify the classification task and streamline the analysis process
 </ul>
 
 
-<figure>
+<figure style="text-align: center;">
   <img src="/images/Tsne_visualization.png">
   <figcaption>Distribution of the Dataset after compression</figcaption>
 </figure>
