@@ -19,7 +19,7 @@ redirect_from:
 
 Education Career
 ======
-<div>
+<div style='display: inline-block;'>
   <div>
     Multidisciplinary Faculty of Mohammed Prime Nador 
   </div>
