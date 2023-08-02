@@ -18,4 +18,4 @@ In order to simplify the classification task and streamline the analysis process
     <li>2 - Proliferative : This class combines the original "Severe" and "Proliferative DR" classes. Images in this class depict severe manifestations of diabetic retinopathy, indicating an advanced stage of the disease and the potential for vision loss.</li>
 </ul>
 
-<img src='/images/Tsne_visualization.png'>
+<img src='/images/Tsne_visualization.png' title='Distribution of the Dataset after compression'>
