@@ -33,3 +33,10 @@ One of the most crucial visualizations in our analysis was the representation of
 
 Number of houses sold by condition:
 <img src="/images/Number of houses sold by condition.png">
+
+<h2>Model Selection & Result</h2>
+
+In the model selection phase, we rigorously experimented with various regression algorithms, including "SVM regression," "linear regression," and several others, to predict house prices accurately. Our objective was to identify the model that provided the most precise and reliable predictions. After thorough evaluation, we found that the "CatBoost" algorithm outperformed all others, delivering exceptional results with an impressive R² value of 91.31%. The R² value indicates the proportion of variance in the target variable (house prices) that is explained by the model, and a value of 91.31% signifies a highly accurate and well-fitted model. The figure we present depicts the performance of each utilized algorithm, clearly demonstrating the superiority of CatBoost in comparison to its counterparts. This success highlights the importance of employing advanced gradient boosting techniques, like CatBoost, in predicting house prices, as they offer powerful capabilities to capture complex patterns and relationships within the data, leading to superior predictive performance and informed decision-making in the ever-changing real estate market.
+
+Model Resules:
+<img src="/images/models_results.png">
