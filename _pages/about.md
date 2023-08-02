@@ -19,3 +19,12 @@ redirect_from:
 
 Education Career
 ======
+<div>
+  <div>
+    Multidisciplinary Faculty of Mohammed Prime Nador 
+  </div>
+  <div>
+    Nador, MOROCCO<br>
+    Aug. 2022 – current students
+  </div>
+</div>
