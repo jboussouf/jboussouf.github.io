@@ -21,6 +21,6 @@ Education Career
 ======
 
 <div style="display: flex;">
-  <div style="width: 200px; height: 100px; background-color: #f0f0f0; margin: 10px; border: 1px solid #ccc;">Multidisciplinary Faculty of Mohammed Prime Nador</div>
-  <div style="width: 200px; height: 100px; background-color: #f0f0f0; margin: 10px; border: 1px solid #ccc;">Nador, MOROCCO<br>Aug. 2022 – current students</div>
+  <div style="width: 70%; height: auto; margin: 10px;">Multidisciplinary Faculty of Mohammed Prime Nador</div>
+  <div style="width: 30%; height: auto; margin: 10px;">Nador, MOROCCO<br>Aug. 2022 – current students</div>
 </div>
