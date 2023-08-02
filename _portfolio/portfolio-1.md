@@ -66,3 +66,5 @@ The note in case of eval1 - eval2 < 0.1:
 
 <h2> Concludion </h2>
 In conclusion, the fine-tuning process of the VIT model for Diabetic Retinopathy yielded impressive results. The history of loss consistently decreasing to 0.0005 demonstrated the model’s effective learning and ability to capture essential visual features specific to the task. Moreover, the history of accuracy consistently surpassing 0.97 showcased the model’s remarkable generalization and high-level performance. Finally, the confusion matrix on the testing dataset provided a detailed analysis of the model’s predictions, allowing for the identification of potential areas for improvement. Altogether, these results indicate the immense potential of the fine-tuned VIT model in aiding the medical community with accurate and reliable Diabetic Retinopathy diagnosis.
+
+Project URL on github: <a href="https://github.com/jboussouf/Advancing-Diabetic-Retinopathy-Detection-for-Enhanced-Eye-Health">Advancing Diabetic Retinopathy Detection: Fine-Tuning VIT Models</a>
