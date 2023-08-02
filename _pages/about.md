@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "About BOUSSOUF"
+title: "👋 Hey there I am Jamal"
 excerpt: "About me"
 author_profile: true
 redirect_from: 
@@ -8,7 +8,14 @@ redirect_from:
   - /about.html
 ---
 
-My name is Jamal BOUSSOUF, and I am a passionate individual currently pursuing a Master's degree in Data Science and Intelligent Systems. I hold a bachelor's degree in Computer Science, specializing in web and network administration, which has provided me with a strong technical foundation. Additionally, during my high school years, I excelled in physics and chemistry, demonstrating my keen interest in science. I am particularly enthusiastic about data science, deep learning, and data security, with a keen interest in exploring the applications of blockchain and cryptography. Constantly seeking to expand my knowledge and skills in these fields, I am driven to make a positive impact through innovative data-driven solutions.
+<ul>
+  <li>😄 I am Jamal Bousouf from Nador in Morocco</li>
+  <li>🎓👨‍🎓 Currently studying for a Master's degree in Data Science and Intelligent Systems.</li>
+  <li>💻🔬 bachelor's degree in computer science with specialization in network and website administration</li>
+  <li>🤖💬📡🌐🔍 Interested in data science, deep learning and data security, such as blockchain technology and cryptography.</li>
+  <li> 🇦🇪🇫🇷🇺🇸 Good knowledge of Arabic, French and English as a second language</li>
+  <li> 🎮🚴‍♂️🏊‍♂️ I have many hobbies such as: Video games, Swimming, Camping ...</li>
+</ul>
 
 Studying Career
 ======
