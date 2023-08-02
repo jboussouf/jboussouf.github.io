@@ -51,3 +51,10 @@ Use prompt engineering to communicate with users:
 <img src="/images/LLM.png">
 
 <h2>Model deployment</h2>
+
+We are thrilled to introduce our new Flask web application, designed to make the process of estimating house prices a seamless and user-friendly experience. With our intuitive interface, users can easily input their property-related details, such as the number of bedrooms, bathrooms, house condition, and other essential features. In case users miss providing some information, our smart application incorporates the power of K-Nearest Neighbors (KNN) imputer to fill in the missing values accurately. The KNN algorithm leverages the data from similar properties to estimate the missing attributes, ensuring a comprehensive and precise analysis. Once all the necessary information is provided, our application utilizes an advanced regression model, such as CatBoost with an R² value of 91.31%, to compute the estimated price of the house. Finally, the result is swiftly returned to the user, offering an instant and reliable estimate for the property's value. With our innovative Flask web application, estimating house prices has never been easier and more efficient!
+
+Chat interface:
+<img src="/images/chatbot.png">
+
+Project URL on github: <a href="https://github.com/jboussouf/ChatEstimate">jboussouf/ChatEstimate</a>
