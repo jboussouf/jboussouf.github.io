@@ -49,3 +49,5 @@ In our project, we strived to develop a comprehensive and adaptable system that 
 
 Use prompt engineering to communicate with users:
 <img src="/images/LLM.png">
+
+<h2>Model deployment</h2>
