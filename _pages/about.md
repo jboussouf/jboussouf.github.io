@@ -40,19 +40,32 @@ First year:
 
 
 <div style="display: flex;">
-  <div style="width: 70%; height: auto; margin: 10px;">Multidisciplinary Faculty of Mohammed Prime Nador <br><span style="font-size: 12px;">Master in Data Science and Intelligent System</span></div>
+  <div style="width: 70%; height: auto; margin: 10px;">Multidisciplinary Faculty of Mohammed Prime Nador <br><span style="font-size: 12px;">Bachelor in Computer Science, Network and web system administration</span></div>
   <div style="width: 30%; height: auto; margin: 10px;">
   Nador, MOROCCO<br>
-  <span style="font-size: 12px;">Aug. 2022 – current students</span>
+  <span style="font-size: 12px;">Aug. 2018 – May 2022</span>
 </div>
 </div>
 
+Third year:
+<ul>
+  <li>Software Development (Java)</li>
+  <li>System Development</li>
+  <li>Web Development (PHP, XML)</li>
+  <li>Networking (packet tracer, GNS3)</li>
+</ul>
+
+Second year:
+<ul>
+  <li>Introduction to C programming</li>
+  <li>Data Structure with C</li>
+  <li>OS (linux)</li>
+  <li>probabelity and statistic</li>
+</ul>
+
 First year:
 <ul>
-  <li>Introduction to AI and Data Science</li>
-  <li>Data Analysis</li>
-  <li>Data bases such as SQL (Oracle) NoSQL (aws simpleDB, MongoDB, firebase)</li>
-  <li>Data mining</li>
-  <li>Web technology with Java EE and Flask</li>
-  <li>Data security</li>
+  <li>Powerful mathematics background</li>
+  <li>Physics</li>
+  <li>Algorithms</li>
 </ul>
