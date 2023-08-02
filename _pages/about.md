@@ -21,7 +21,7 @@ Education Career
 ======
 
 <div style="display: flex;">
-  <div style="width: 70%; height: auto; margin: 10px;">Multidisciplinary Faculty of Mohammed Prime Nador <br><span style="font-size: 12px;">Master in Data Science and Intelligent System</span></div>
+  <div style="width: 70%; height: auto; margin: 10px;">Master in Data Science and Intelligent System<br><span style="font-size: 12px;">Multidisciplinary Faculty of Mohammed Prime Nador</span></div>
   <div style="width: 30%; height: auto; margin: 10px;">
   Nador, MOROCCO<br>
   <span style="font-size: 12px;">Aug. 2022 – current students</span>
@@ -40,7 +40,7 @@ First year:
 
 
 <div style="display: flex;">
-  <div style="width: 70%; height: auto; margin: 10px;">Multidisciplinary Faculty of Mohammed Prime Nador <br><span style="font-size: 12px;">Bachelor in Computer Science, Network and web system administration</span></div>
+  <div style="width: 70%; height: auto; margin: 10px;">Bachelor in Computer Science, Network and web system administration<br><span style="font-size: 12px;">Multidisciplinary Faculty of Mohammed Prime Nador</span></div>
   <div style="width: 30%; height: auto; margin: 10px;">
   Nador, MOROCCO<br>
   <span style="font-size: 12px;">Aug. 2018 – May 2022</span>
@@ -49,6 +49,7 @@ First year:
 
 Third year:
 <ul>
+  <li>Digital signature using elliptic curves</li>
   <li>Software Development (Java)</li>
   <li>System Development</li>
   <li>Web Development (PHP, XML)</li>
