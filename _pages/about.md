@@ -70,3 +70,17 @@ First year:
   <li>Physics</li>
   <li>Algorithms</li>
 </ul>
+
+<div style="display: flex;">
+  <div style="width: 70%; height: auto; margin: 10px;">Degree in Physical Sciences and Chemistry<br><span style="font-size: 12px;">Farkhana College</span></div>
+  <div style="width: 30%; height: auto; margin: 10px;">
+  Nador, MOROCCO<br>
+  <span style="font-size: 12px;">Aug. 2015 – May 2018</span>
+</div>
+</div>
+
+Third year:
+<ul>
+  <li>Basis of Mathematics</li>
+  <li>Masis of Physics and Chemistry</li>
+</ul>
