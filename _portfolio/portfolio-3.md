@@ -34,3 +34,17 @@ The loss nad accuracy of the CNN Model:
   <div style="width: 50%; height: auto; margin: 10px;"><img src='/images/accur_cnn_SEGAN.png'>
 </div>
 </div>
+
+<h2>CNN Evaluation</h2>
+when we systematically introduce noise effects to the data during testing, we observe a decline in the model's performance. The noise, which can be in the form of random perturbations, distortions, or other modifications to the data, adversely affects the CNN's ability to discern meaningful patterns and features in the input. As a result, the accuracy and overall effectiveness of the model in classifying the data diminish, leading to lower evaluation scores on the performance chart. This highlights the sensitivity of the CNN to noise and underscores the need for robustness and noise-resistant techniques in real-world applications.
+
+CNN Evaluation:
+<br/><img src='/images/model evaluation.png'>
+
+<h2>Autoencoder</h2>
+
+
+We employ an autoencoder architecture based on a Convolutional Neural Network (CNN) with a two-part structure, consisting of an encoder and a decoder, seamlessly connected through a bottleneck layer. The encoder efficiently compresses the input data into a lower-dimensional representation, while the decoder reconstructs the original data from this compressed representation. By leveraging the bottleneck layer, we ensure that only the most salient features are preserved, leading to more effective feature extraction. Additionally, we introduce skip connections between convolutional layers to facilitate the flow of information from earlier layers to later ones. 
+
+Autoencoder architect:
+<br/><img src='/images/Autoencoder.png'>
