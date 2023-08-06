@@ -49,7 +49,7 @@ We employ an autoencoder architecture based on a Convolutional Neural Network (C
 Autoencoder architect:
 <br/><img src='/images/Autoencoder.png'>
 
-<h2>Autoencoder</h2>
+<h2>Autoencoder results</h2>
 When employing autoencoders, a type of neural network used for unsupervised learning and data compression, suboptimal outcomes may arise if the generated data lacks clarity. This deficiency in clarity could lead to a diminished reconstruction quality of the original input samples, thereby adversely affecting subsequent tasks. In contrast, Convolutional Neural Networks (CNNs) tend to yield superior results in such situations.
 
 Autoencoder results:
