@@ -48,3 +48,22 @@ We employ an autoencoder architecture based on a Convolutional Neural Network (C
 
 Autoencoder architect:
 <br/><img src='/images/Autoencoder.png'>
+
+<h2>Autoencoder</h2>
+When employing autoencoders, a type of neural network used for unsupervised learning and data compression, suboptimal outcomes may arise if the generated data lacks clarity. This deficiency in clarity could lead to a diminished reconstruction quality of the original input samples, thereby adversely affecting subsequent tasks. In contrast, Convolutional Neural Networks (CNNs) tend to yield superior results in such situations.
+<br/><img src='/images/auto_encoder_resoult.png'>
+
+<h2>SEGAN architecture</h2>
+
+In the GAN architecture, three main components play crucial roles. Firstly, an autoencoder is incorporated into our architecture to serve as the generator. Its purpose is to attempt noise removal from the audios, refining the data for subsequent stages. Secondly, the discriminator comes into play, responsible for distinguishing between the generated data and real data. It evaluates the input and provides a verdict on whether the data is authentic or counterfeit. Finally, the dataset serves as the third essential element, utilized by the discriminator to make accurate judgments regarding the authenticity of the data, ultimately shaping the overall performance and effectiveness of the GAN model.
+
+<br/><img src='/images/SEGAN.png'>
+
+<h2>SEGAN results</h2>
+
+In the process of model evaluation, the effectiveness of the autoencoder trained within the GAN architecture becomes evident from the following figure. Notably, when subjected to 5000 units of noise, the CNN model achieves a modest accuracy of 40%. However, upon utilizing the Autoencoder to remove the noise from the data, its performance improves significantly to a commendable 60%. It is worth noting that the CNN model outperforms the Autoencoder in scenarios where no noise is applied, achieving an impressive accuracy of 82%, while the Autoencoder yields a respectable 75%. This comparative analysis underscores the autoencoder's capability in noise reduction, thereby enhancing the CNN model's accuracy in the presence of noise, while also highlighting the CNN's inherent strength in noise-free conditions.
+
+<br/><img src='/images/auto_Noise.png'>
+
+
+Project URL on github: <a href="https://github.com/jboussouf/Overcoming-Speech-Recognition-Challenges-with-GAN-based-Solutions">jboussouf/Overcoming-Speech-Recognition-Challenges-with-GAN-based-Solutions</a>
