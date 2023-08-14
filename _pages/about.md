@@ -84,3 +84,21 @@ Third year:
   <li>Basis of Mathematics</li>
   <li>Masis of Physics and Chemistry</li>
 </ul>
+
+Volunteering
+======
+<div style="display: flex;">
+  <div style="width: 70%; height: auto; margin: 10px;">Treasurer of the club<br><span style="font-size: 12px;">I2A club</span></div>
+  <div style="width: 30%; height: auto; margin: 10px;">
+  FPN, Nador, MOROCCO<br>
+  <span style="font-size: 12px;">April. 2023 – Current</span>
+</div>
+</div>
+
+<div style="display: flex;">
+  <div style="width: 70%; height: auto; margin: 10px;">Organizer of hackathon in AI<br><span style="font-size: 12px;">I2A club</span></div>
+  <div style="width: 30%; height: auto; margin: 10px;">
+  FPN, Nador, MOROCCO<br>
+  <span style="font-size: 12px;">Jun 2023</span>
+</div>
+</div>
