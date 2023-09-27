@@ -17,6 +17,23 @@ redirect_from:
   <li> 🎮🚴‍♂️🏊‍♂️ I have many hobbies such as: Video games, Swimming, Camping ...</li>
 </ul>
 
+
+Communications
+======
+
+<div style="display: flex;">
+  <div style="width: 70%; height: auto; margin: 10px;">Signing Algorithms Behind Blockchain Digital Transactions<br><span style="font-size: 12px;">MASI</span></div>
+  <div style="width: 30%; height: auto; margin: 10px;">
+  FPN, Nador, MOROCCO<br>
+  <span style="font-size: 12px;">Oct. 23, 2022</span>
+</div>
+</div>
+
+<ul>
+  <li><a href="https://drive.google.com/drive/folders/1krIp5X9WD4GDSQc-1NXPieC8cYMjK9ac">Presentation AND Certificate</a></li>
+</ul>
+
+
 Education Career
 ======
 
@@ -84,6 +101,10 @@ Third year:
   <li>Basis of Mathematics</li>
   <li>Masis of Physics and Chemistry</li>
 </ul>
+
+
+
+
 
 Volunteering
 ======
