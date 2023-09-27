@@ -1,7 +1,12 @@
 ---
-title: "Blockchain under a clear vision"
-excerpt: "A blockchain system to manage monetary transactions between the different nodes of a decentralized network.<br/><img src='/images/BC.png'>"
+title: "Complete Web Application For Laboratory Management Using Spring Boot"
+excerpt: "Use Spring Boot to create a web application for managing a laboratory, where users can create and manage publications and also projects.<br/><img src='/images/header_page.png'>"
 collection: portfolio
 ---
 
-The proposed project is an innovative cryptography application that embodies the principles of a blockchain framework, offering a comprehensive suite of components to ensure secure and transparent transactions. At its core, this blockchain solution encompasses essential elements such as node balances, public-private key pairs, and a meticulously maintained list of network nodes. Users are empowered with the ability to initiate transactions, leveraging their cryptographic keys to authenticate and authorize transfers of digital assets. Furthermore, the system incorporates a mining mechanism that not only validates and records transactions but also reinforces the network's integrity through its consensus protocol. A distinctive feature of this application is its robust signature verification process, which safeguards the authenticity of transactions and interactions within the blockchain, thereby establishing a trustless and tamper-proof environment. Through these intricate layers of cryptography, decentralization, and consensus, the proposed project redefines secure and efficient digital transactions in a transformative manner.<br/><img src='/images/BC_general.png'>
+Use Spring Boot to create a web application for managing a laboratory, where users can create and manage publications and also projects.<br/><img src='/images/index.png'><br>
+In this project, we harnessed the power of Spring Boot, an efficient and intuitive framework that simplifies the development of web applications. Spring Security was seamlessly integrated to fortify our application with robust authentication and authorization mechanisms, ensuring a secure user experience. Leveraging Thymeleaf, a modern server-side Java template engine, we crafted dynamic and visually appealing web pages for our laboratory application. Additionally, MySQL was employed as the database management system, allowing us to efficiently store, manage, and retrieve data, providing a solid foundation for the functionality and data management of our web application tailored for laboratory operations. Through the harmonious interplay of these technologies, we have successfully created a powerful and user-friendly laboratory web application.
+
+
+
+Project URL on github: <a href="https://github.com/jboussouf/Complete-Web-Application-For-Laboratory-Management-Using-Spring-Boot">jboussouf/Complete-Web-Application-For-Laboratory-Management-Using-Spring-Boot</a>

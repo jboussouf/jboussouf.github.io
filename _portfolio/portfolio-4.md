@@ -1,49 +1,70 @@
 ---
-title: "Confidential, secure and optimal communication: Secure P2P chat application using java"
-excerpt: "In this work, we will propose a secure P2P chat application in java programming language, and this system consists of a robust, fully decentralized (P2P) and end-to-end encrypted network architecture.<br/><img src='/images/communication_P2P.png'>"
+title: "Advancing Diabetic Retinopathy Detection: Fine-Tuning VIT Models"
+excerpt: "This work focuses on advancing the detection of diabetic retinopathy through the implementation of Vision Transformer (ViT) models, as state-of-the-art deep learning approach to computer vision.<br/><img src='/images/Retinopathy.png'>"
 collection: portfolio
 ---
 
-The need to transmit messages between us human beings requires a strong need for security due to the existence of sensitive data; this always leads us to find more confidential means of communication when messages are transmitted from a sender to a receiver. In other words, it is a matter of avoiding the survival of messages by bailout attacks.
+This work focuses on advancing the detection of diabetic retinopathy through the implementation of Vision Transformer (ViT) models, a state-of-the-art deep learning approach to computer vision. The system automates the identification of levels of diabetic retinopathy by classifying retinal images into three categories. The ViT model is meticulously trained on a large dataset of retinal images from Kaggle (available at <a href="https://www.kaggle.com/datasets/amanneo/diabetic-retinopathy-resized-arranged">amanneo/diabetic-retinopathy-resized-arranged</a>).
 
-Today we find enough applications that perform this task, but as far as the idea of peer to peer is concerned, we don't find enough, because its network architecture presents complications to ensure real security since there is no controlled organization that manages the transmission of messages. At this stage, we have worked in this project to develop a secure chat application that includes more powerful encryption and coding methods, we are talking about RSA, AES... .<br/><img src='/images/communication_P2P.png'>
+<br/><img src='/images/Retinopathy.png'>
 
-<h2>Network architecture</h2>
+<h2>Data PreProcessing</h2>
 
-The general architecture of the proposed system is in the form of a complete and fully connected graph: there are nodes that are connected to each other by a virtual communication channel. The nodes on the one hand are defined by a logical address (IP), a key pair (public/private) and an identifier (ID) so that they are recognized by the rest of the network.
+In order to simplify the classification task and streamline the analysis process, the original dataset, consisting of five classes based on the severity of diabetic retinopathy, has been transformed into three classes. The new class structure is as follows:
 
-Network architect:
-<br/><img src='/images/net_arch.png'>
+<ul>
+    <li>0 - No DR : This class remains unchanged and represents images of eyes without any signs of diabetic retinopathy</li>
+    <li>1 - Mild : This class combines the original "Mild" and "Moderate" classes. Images in this class exhibit mild to moderate signs of diabetic retinopathy, representing the initial and intermediate stages of the condition</li>
+    <li>2 - Proliferative : This class combines the original "Severe" and "Proliferative DR" classes. Images in this class depict severe manifestations of diabetic retinopathy, indicating an advanced stage of the disease and the potential for vision loss.</li>
+</ul>
+Distribution of the Dataset after compression:
+<img src='/images/Tsne_visualization.png'>
 
-<h2>Data exchange</h2>
+<h2>Fine-Tune VIT for Diabetic Retinopathy problem</h2>
+Fine-tuning is a powerful technique in machine learning that involves taking a pre-trained model and adapting it to a specific task or dataset. It is particularly useful when working with limited labeled data or when aiming to achieve high performance on a specialized task. The process of fine-tuning typically involves two main steps : initializing the pre-trained model with its learned weights and then updating these weights by training on the new task-specific dataset.
 
-When communicating between nodes in the network, nodes send secure packet types based on the state of the communication, i.e., each node enters a three-state process before it can communicate securely. These states are reached as soon as the receiver accepts each of the three packet types. The first is for discovering the nodes in the network, the second is for exchanging key packets (AES) to manage them. The first is for discovering the nodes in the network, the second is for exchanging key packets (AES) to manage them securely, as we will see later, and the last packet is used for sending the message and for general communication. These packets usually circulate in an internal network where the architecture is defined.
+<h2>VIT Result</h2>
+During the fine-tuning process of the Vision Transformer (VIT) model for Diabetic Retinopathy, we observed a remarkable trend in the history of loss. As the model iteratively learned from the task-specific dataset, the loss consistently decreased with each training epoch. This decline in loss indicates that the model successfully minimized the difference between its predicted outputs and the ground truth labels, moving closer to accurate predictions.
 
+Loss of VIT fine-tuning:
+<img src='/images/histLoss_of_the_VIT_model.png'>
 
-<br/><img src='/images/msg_exchange.png'>
+The fine-tuned Vision Transformer (VIT) model exhibited an exceptional performance during training, as evident from the history of accuracy. Throughout the training process, the model consistently achieved an accuracy of over 97% on the task-specific dataset. This high accuracy was a testament to the efficacy of fine-tuning and the ability of the VIT model to discern relevant features for Diabetic Retinopathy classification. The consistently high accuracy demonstrated the model’s robustness and generalization capabilities, implying that it could
+accurately classify unseen retinal images with a high level of confidence.
 
-<h2>Security</h2>
+Accuracy of VIT fine-tuning:
+<img src='/images/histAccuracy_of_the_VIT_model.png'>
 
-<h3>Representation of the network</h3>
-we have configured our network as a darkroom, this room is divided into sub-areas, each area is represented by its address (1-1, 1-2, ..., n-n). For this room users can't see other areas without sending a scan packet and if this area is full of a user, the user sends another acceptance scan packet with his information.
+After fine-tuning the Vision Transformer (VIT) model for Diabetic Retinopathy, we evaluated its performance on an independent testing dataset. The confusion matrix provided a comprehensive breakdown of the model’s predictions across different severity classes of Diabetic Retinopathy. It revealed the distribution of true positive, true negative, false positive, and false negative predictions, allowing us to assess the model’s performance comprehensively. By examining the confusion matrix, we could identify potential areas of misclassification and
+gain insights into the model’s strengths and weaknesses. The confusion matrix acted as a valuable diagnostic tool, guiding us in further fine-tuning the model to optimize its accuracy and specificity for different severity levels.
 
-<br/><img src='/images/new_user.png'>
-<br />
-Currently, if a new user wants to be added to the network, it sends a message to each zone, the message contains its name, and if a user exists in a zone, it adds the new user to its user list (infoNode list as a new node). Then the receiver sends the person who scanned an accepted scan packet with the receiver's ID.
-<h3>Scanning</h3>
-As we have seen, the user sends a packet to each network zone. If a user exists in one of the zones zone, the receiver creates a new infoNode containing the new node's information and adds it to a list of nodes, then to a list of nodes, then generates a packet with its ID and sends it to the sender to do the same job of adding a new node. add a user to its list of nodes.
+Confusion Matrix on Test dataset using VIT:
+<img src='/images/Confusion_Matrix_VIT.png'>
 
-<br/><img src='/images/scan_net.png'>
+<h2>Model Deployment</h2>
 
-<h3>Exchange of keys</h3>
+The model is integrated into a web application using Flask as the web framework. Flask facilitates handling HTTP requests and responses, providing a smooth communication channel between the front-end and back-end components. The front-end of the application is
+developed using web technologies such as HTML, CSS, and JS.
 
-At the moment, the user has a list of other users but he can't establish a secure communication with the other users, so we have to use AES to generate a secure communication channel and to exchange this and to exchange this key we have to use another algorithm called RSA algorithm, and the users exchange the AES keys by sending a packet of type setAES and also include the public key of the RSA key pair ; then the receiver of the packet generates an AES key and adds it to the information of the sender's node, then encrypts it with the RSA public key, then generates a getAES packet, and for the time being the new receiver (which was a sender) decrypts the AES key using the RSA private key and adds it to the sender's information.
+The web application interface consists of a user-friendly layout with two distinct zones dedicated to image selections : the "Right" and "Left" eye image zones. The design prioritizes simplicity and intuitiveness, allowing users to effortlessly upload or choose images for each eye. 
 
-<br/><img src='/images/key_exchange.png'>
+Once the user clicks on the "Predict" button, the web application initiates the image uploading process, securely transferring the selected "Right" and "Left" eye images to the server for analysis. The server, equipped with powerful image processing VIT_fine_tuned model, Once the prediction process is complete, the web application redirects the user to a new page displaying the results.
 
-<h3>Communication</h3>
-Finally, for the moment, we are able to communicate in a secure way and without going through a server (decentralized) and to use a secure channel to exchange messages.
+The "Prediction Page" is designed to showcase the uploaded images alongside the insightful predictions made by the VIT model. The predictions are presented in an easily interpretable format, such as a labeled classification result or a confidence score for each image. Additionally, visual representations like heatmaps or highlighted areas further assist the user in understanding how the model arrived at its conclusions.
 
-<br/><img src='/images/comm.png'>
+Web_App interface:
+<img src='/images/with_images.png'>
 
-Project URL on github: <a href="https://github.com/jboussouf/Confidential-secure-and-optimal-communication-P2P">jboussouf/Confidential-secure-and-optimal-communication-P2P</a>
+Results of the Model:
+<img src='/images/pridection.png'>
+
+Important Note : If the subtraction between the predicted results for the "Right" and "Left" eye images yields a percentage of evaluation that is under 0.1 (i.e., less than 10% difference), the user will receive the following message : "We hope that you will see a specialized ophthalmologist due to the inability of the model to extract sufficient information".
+
+The note in case of eval1 - eval2 < 0.1:
+
+<img src='/images/doctor.png'>
+
+<h2> Concludion </h2>
+In conclusion, the fine-tuning process of the VIT model for Diabetic Retinopathy yielded impressive results. The history of loss consistently decreasing to 0.0005 demonstrated the model’s effective learning and ability to capture essential visual features specific to the task. Moreover, the history of accuracy consistently surpassing 0.97 showcased the model’s remarkable generalization and high-level performance. Finally, the confusion matrix on the testing dataset provided a detailed analysis of the model’s predictions, allowing for the identification of potential areas for improvement. Altogether, these results indicate the immense potential of the fine-tuned VIT model in aiding the medical community with accurate and reliable Diabetic Retinopathy diagnosis.
+
+Project URL on github: <a href="https://github.com/jboussouf/Advancing-Diabetic-Retinopathy-Detection-for-Enhanced-Eye-Health">Advancing Diabetic Retinopathy Detection: Fine-Tuning VIT Models</a>
