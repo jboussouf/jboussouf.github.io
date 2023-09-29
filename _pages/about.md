@@ -18,6 +18,13 @@ redirect_from:
 </ul>
 
 
+Portfolio
+======
+
+For the project check my <a href='/portfolio/'> Portfolio </a>
+
+
+
 Communications
 ======
 
@@ -33,10 +40,7 @@ Communications
   <li><a href="https://drive.google.com/drive/folders/1krIp5X9WD4GDSQc-1NXPieC8cYMjK9ac">Presentation AND Certificate</a></li>
 </ul>
 
-Portfolio
-======
 
-For the project check my <a href='/portfolio/'> Portfolio </a>
 
 Education Career
 ======
