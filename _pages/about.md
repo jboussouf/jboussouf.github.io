@@ -40,7 +40,7 @@ Education Career
 ======
 
 <div style="display: flex;">
-  <div style="width: 70%; height: auto; margin: 10px;">Master in Data Science and Intelligent System<br><span style="font-size: 12px;">Multidisciplinary Faculty of Mohammed Prime Nador</span></div>
+  <div style="width: 70%; height: auto; margin: 10px; font-weight: bold;">Master in Data Science and Intelligent System<br><span style="font-size: 12px;">Multidisciplinary Faculty of Mohammed Prime Nador</span></div>
   <div style="width: 30%; height: auto; margin: 10px;">
   Nador, MOROCCO<br>
   <span style="font-size: 12px;">Aug. 2022 – current students</span>
@@ -59,7 +59,7 @@ First year:
 
 
 <div style="display: flex;">
-  <div style="width: 70%; height: auto; margin: 10px;">Bachelor in Computer Science, Network and web system administration<br><span style="font-size: 12px;">Multidisciplinary Faculty of Mohammed Prime Nador</span></div>
+  <div style="width: 70%; height: auto; margin: 10px; font-weight: bold;">Bachelor in Computer Science, Network and web system administration<br><span style="font-size: 12px;">Multidisciplinary Faculty of Mohammed Prime Nador</span></div>
   <div style="width: 30%; height: auto; margin: 10px;">
   Nador, MOROCCO<br>
   <span style="font-size: 12px;">Aug. 2018 – May 2022</span>
@@ -91,7 +91,7 @@ First year:
 </ul>
 
 <div style="display: flex;">
-  <div style="width: 70%; height: auto; margin: 10px;">Degree in Physical Sciences and Chemistry<br><span style="font-size: 12px;">Farkhana College</span></div>
+  <div style="width: 70%; height: auto; margin: 10px; font-weight: bold;">Degree in Physical Sciences and Chemistry<br><span style="font-size: 12px;">Farkhana College</span></div>
   <div style="width: 30%; height: auto; margin: 10px;">
   Nador, MOROCCO<br>
   <span style="font-size: 12px;">Aug. 2015 – May 2018</span>
@@ -111,7 +111,7 @@ Third year:
 Volunteering
 ======
 <div style="display: flex;">
-  <div style="width: 70%; height: auto; margin: 10px;">Treasurer of the club<br><span style="font-size: 12px;">I2A club</span></div>
+  <div style="width: 70%; height: auto; margin: 10px; font-weight: bold;">Treasurer of the club<br><span style="font-size: 12px;">I2A club</span></div>
   <div style="width: 30%; height: auto; margin: 10px;">
   FPN, Nador, MOROCCO<br>
   <span style="font-size: 12px;">April. 2023 – Current</span>
@@ -119,7 +119,7 @@ Volunteering
 </div>
 
 <div style="display: flex;">
-  <div style="width: 70%; height: auto; margin: 10px;">Organizer of hackathon in AI<br><span style="font-size: 12px;">I2A club</span></div>
+  <div style="width: 70%; height: auto; margin: 10px; font-weight: bold;">Organizer of hackathon in AI<br><span style="font-size: 12px;">I2A club</span></div>
   <div style="width: 30%; height: auto; margin: 10px;">
   FPN, Nador, MOROCCO<br>
   <span style="font-size: 12px;">Jun 2023</span>
