@@ -18,18 +18,12 @@ redirect_from:
 </ul>
 
 
-Portfolio
-======
-
-For the project check my <a href='/portfolio/'> Portfolio </a>
-
-
 
 Communications
 ======
 
 <div style="display: flex;">
-  <div style="width: 70%; height: auto; margin: 10px;">Signing Algorithms Behind Blockchain Digital Transactions<br><span style="font-size: 12px;">MASI</span></div>
+  <div style="width: 70%; height: auto; margin: 10px; font-weight: bold;">Signing Algorithms Behind Blockchain Digital Transactions<br><span style="font-size: 12px;">MASI</span></div>
   <div style="width: 30%; height: auto; margin: 10px;">
   FPN, Nador, MOROCCO<br>
   <span style="font-size: 12px;">Oct. 23, 2022</span>

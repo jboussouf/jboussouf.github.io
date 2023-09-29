@@ -9,7 +9,7 @@ main:
   #- title: "Teaching"
   #  url: /teaching/    
     
-  - title: <div style="background-color:#290729; color=#FFFFFF" >Portfolio</div>
+  - title: <div style="background-color:#290729; color=#000" >Portfolio</div>
     url: /portfolio/
         
   #- title: "Blog Posts"
