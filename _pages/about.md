@@ -101,7 +101,7 @@ First year:
 Third year:
 <ul>
   <li>Basis of Mathematics</li>
-  <li>Masis of Physics and Chemistry</li>
+  <li>Basis of Physics and Chemistry</li>
 </ul>
 
 
