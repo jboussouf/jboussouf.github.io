@@ -1,71 +1,73 @@
 ---
-title: "Elliptic curve in PARI/GP using python"
-excerpt: "In this work, we represent how to use PARI/GP for elliptic curves with python and apply it to the use of ECDH and ECDSA.<br/><img src='/images/ECC.png'>"
+title: "Overcoming Speech Recognition Challenges with GAN based Solutions"
+excerpt: "This study applies deep learning techniques to improve speech recognition in different environments, including noisy situations. The study presents the results of a Convolutional Neural Network (CNN) model that achieved high accuracy in recognizing spoken words in clean audio data but struggled as noise levels increased. <br/><img src='/images/GAN.png'>"
 collection: portfolio
 ---
 
-In terms of security, cryptography is just a cover between the attacker and the network users. The right choice of cryptosystem is therefore a difficult mission and one of the good cryptosystems used is the elliptic curve.<br/><img src='/images/Sec_level.png'><br>
-Thus, as we can see, we get the same level of security for small key lengths, since for level 80 we only need 160 bits while 1024 bits are needed for the RSA encryption system. For elliptic curves, there is not only one algorithm, but we use each algorithm for a given task, like for key exchange we have to use ECDH and for digital signature we use ECDSA or EdDSA.
+This study applies deep learning techniques to improve speech recognition in different environments, including noisy situations. The study presents the results of a Convolutional Neural Network (CNN) model that achieved high accuracy in recognizing spoken words in clean audio data but struggled as noise levels increased. An attempt to use a simple autoencoder to remove noise from the audio data resulted in a significant decline in classification performance, indicating the need for more advanced denoising techniques. The study proposes the Speech enhancement Generative Adversarial Network (SEGAN) as a solution to improve speech recognition's robustness by generating clean speech signals from noisy inputs. The results demonstrate the potential of deep learning techniques in improving speech recognition technology, but careful evaluation of various components and techniques is crucial for optimal performance.<br/><img src='/images/GAN.png'>
 
-<h2>Setup</h2>
-To use <a href="https://pari.math.u-bordeaux.fr/doc.html">PARI/GP</a> in python, we need to use a python library named <a href="https://github.com/sagemath/cypari2">cypari2</a>, this library supports both Python 2 and Python 3. To install it, we use:
+<h2>Data Presentation</h2>
 
-```
-pip install cypari2 [--user]
-```
-(the --user option allows to install cypari2 for a single user and avoids using pip with administrator rights). Depending on your operating system, the pip command can also be called pip2 or pip3.
+In this project, we introduce a meticulously curated dataset that serves as the backbone for tackling the Speech Recognition Challenges using GAN-based solutions. The dataset comprises WAV audio files, each precisely one second in length, making it a perfect fit for training and evaluating speech recognition models. Our carefully selected dataset is sourced from Kaggle and is openly available to the research community at the following URL: <a href="https://www.kaggle.com/datasets/wangshaoqi/speech-commands">wangshaoqi/speech-commands</a>. 
 
-Or we can also use:
+This dataset is a valuable resource for anyone looking to delve into the fascinating domain of speech recognition and explore the potential of Generative Adversarial Networks (GANs) for enhancing speech processing systems. With diverse audio samples representing various speech commands, our dataset promises to foster innovative and robust advancements in the field of automatic speech recognition.
 
-```
-  pip install git+https://github.com/sagemath/cypari2.git [--user]
-```
-for the moment, we are able to use PARI/GP with python.
+In this project, we have chosen to work with just three words: "one," "two," and "three." These carefully selected words represent essential phonetic elements and will simplify the initial stages of training and evaluation.
 
-<h2>ECDH in python</h2>
+<h2>Data Transformation</h2>
 
-Elliptic-curve Diffie–Hellman (ECDH) is one of the most used cryptosystems for key exchange and used by "IMessage, Whatsapp, SSL, HTTPS", and in this section you can check the file ECDH.ipynb to see the full code of this algorithm.
+In addition to transforming the audio data into spectrogram format, we will augment the dataset by introducing random noise at different levels. Data augmentation is a powerful technique that helps improve the robustness and generalization of our models. By injecting random noise into the audio samples at varying intensities, we simulate real-world environmental factors and add variability to the training data. This approach allows our models to become more resilient to noise and other distortions commonly encountered in practical speech recognition scenarios. 
 
-The first thing we have to do is to check if cypari2 is already installed in the system, if not we have to install it.
+Spectrogram format of bowth data with noise and without noise:
+<br/><img src='/images/data_noise_without_noise.png'>
 
-<h3>System part</h3>
-In this part we use an object of the ECDHSys class and then we output the system parameters.
-```
-  ecdhSyd = ECDHSys(a, b, p)
-```
-if we enter a=0, b=7 and p=43, the output will be :
-```
-{'a': 0, 'b': 7, 'p': 43, 'ordre': 31, 'generator': '[32, 3]'}
-```
-<br/><img src='/images/ell_elem.png'>
-<h3>User part</h3>
-In this part we will use an object of the ECDHUser class, then we will use it to generate a random private key; then we will double the chosen generator by the system class.
-```
-ecdhUser = ECDHUser(sysKey)
-```
-Thus, between each user, we generate an encrypted key between them (in this example, the encrypted key is [2, 12]). We can now use this key for key exchange.
+<h2>Classification Model</h2>
 
-<br/><img src='/images/key_ex.png'>
-<h2>ECDSA in python</h2>
-ECDSA is a digital signature bayser by the elluptic curve cryptographic system and one of the most popular digital signatures used by many blockchains like bitcoin, ethirum, dodgecoin, etc. And for our project ECDSA is represented in the file ECDSA.ipynb.
+For our speech recognition task, we employed a Convolutional Neural Network (CNN) architecture. The model architecture consists of multiple convolutional layers, each followed by max-pooling layers to downsample the spatial dimensions of the feature maps. The first two convolutional layers have 128 filters, while the subsequent two have 64 filters. The final convolutional layer has 32 filters before flattening the output to connect to a fully connected (dense) layer with three neurons, representing the three target classes "one," "two," and "three." The model has a total of 543,747 trainable parameters, making it an efficient choice for our speech recognition task. By training this CNN architecture on the transformed spectrogram data enriched with random noise, we aim to develop robust GAN-based solutions for accurate and efficient speech recognition.
 
-First of all, for our project, we will use ECDSASys to create an object named ecdsaSys. This object will create the important parameters to use it to generate keys for the digital signature.
-```
-  ecdsaSys = ECDSASys(0, 13)
-```
-(There is a section in the code where we loop over part of the code and generate a random prime number until the order of the curve is a prime number because we are looking to do PGCD(prime, order, outher number) = 1, and the only way to get that is to do PGCD(prime, order) = 1.)
+CNN architecture:
+<br/><img src='/images/cnn_architect.png'>
 
-<br/><img src='/images/ECDSA.png'>
+The loss nad accuracy of the CNN Model:
+<div style="display: flex;">
+  <div style="width: 50%; height: auto; margin: 10px;"><br/><img src='/images/loss_cnn_SEGAN.png'></div>
+  <div style="width: 50%; height: auto; margin: 10px;"><img src='/images/accur_cnn_SEGAN.png'>
+</div>
+</div>
 
-Thus, for the time being, any user of the system is able to generate a key pair to sign and verify the signature of the other. To generate a key pair, the user uses an ECDSAUser object and takes as argument the parameters of the system, to generate a private key "d" and a public key "A" formed as a point, then the user signs a piece of information (hash of the transaction in the case of a transaction), then sends the information to the other users with the clear information to verify the signature.
+<h2>CNN Evaluation</h2>
+when we systematically introduce noise effects to the data during testing, we observe a decline in the model's performance. The noise, which can be in the form of random perturbations, distortions, or other modifications to the data, adversely affects the CNN's ability to discern meaningful patterns and features in the input. As a result, the accuracy and overall effectiveness of the model in classifying the data diminish, leading to lower evaluation scores on the performance chart. This highlights the sensitivity of the CNN to noise and underscores the need for robustness and noise-resistant techniques in real-world applications.
 
-```
-  ecdsaUser = ECDSAUser(parameters)
-```
+CNN Evaluation:
+<br/><img src='/images/model evaluation.png'>
 
-<br/><img src='/images/Sign.png'>
+<h2>Autoencoder</h2>
 
-<h2>Conclusion</h2>
-Elliptic curves are one of the most used encryption systems in the world of digital signature and key exchange, by many algorithms such as ECDH and ECDSA, but for digital signature, there is a problem to find a curve with a modulo number in the modulo section has a prime order, and it makes a big problem for us to use a recommended curve like secp256k1 that we use in the bitcoin digital signature, or use on a curve, but we have to try until we find a great curve with a prime order. Like the work of a foundryman, we are trying to find a method to know if a curve is a light to use for the digital signature.
 
-Project URL on github: <a href="https://github.com/jboussouf/Elliptic-Curve-Cryptography">jboussouf/Elliptic-Curve-Cryptography</a>
+We employ an autoencoder architecture based on a Convolutional Neural Network (CNN) with a two-part structure, consisting of an encoder and a decoder, seamlessly connected through a bottleneck layer. The encoder efficiently compresses the input data into a lower-dimensional representation, while the decoder reconstructs the original data from this compressed representation. By leveraging the bottleneck layer, we ensure that only the most salient features are preserved, leading to more effective feature extraction. Additionally, we introduce skip connections between convolutional layers to facilitate the flow of information from earlier layers to later ones. 
+
+Autoencoder architect:
+<br/><img src='/images/Autoencoder.png'>
+
+<h2>Autoencoder results</h2>
+When employing autoencoders, a type of neural network used for unsupervised learning and data compression, suboptimal outcomes may arise if the generated data lacks clarity. This deficiency in clarity could lead to a diminished reconstruction quality of the original input samples, thereby adversely affecting subsequent tasks. In contrast, Convolutional Neural Networks (CNNs) tend to yield superior results in such situations.
+
+Autoencoder results:
+<br/><img src='/images/auto_encoder_resoult.png'>
+
+<h2>SEGAN architecture</h2>
+
+In the GAN architecture, three main components play crucial roles. Firstly, an autoencoder is incorporated into our architecture to serve as the generator. Its purpose is to attempt noise removal from the audios, refining the data for subsequent stages. Secondly, the discriminator comes into play, responsible for distinguishing between the generated data and real data. It evaluates the input and provides a verdict on whether the data is authentic or counterfeit. Finally, the dataset serves as the third essential element, utilized by the discriminator to make accurate judgments regarding the authenticity of the data, ultimately shaping the overall performance and effectiveness of the GAN model.
+
+SEGAN architect:
+<br/><img src='/images/SEGAN.png'>
+
+<h2>SEGAN results</h2>
+
+In the process of model evaluation, the effectiveness of the autoencoder trained within the GAN architecture becomes evident from the following figure. Notably, when subjected to 5000 units of noise, the CNN model achieves a modest accuracy of 40%. However, upon utilizing the Autoencoder to remove the noise from the data, its performance improves significantly to a commendable 60%. It is worth noting that the CNN model outperforms the Autoencoder in scenarios where no noise is applied, achieving an impressive accuracy of 82%, while the Autoencoder yields a respectable 75%. This comparative analysis underscores the autoencoder's capability in noise reduction, thereby enhancing the CNN model's accuracy in the presence of noise, while also highlighting the CNN's inherent strength in noise-free conditions.
+
+SEGAN results:
+<br/><img src='/images/auto_Noise.png'>
+
+
+Project URL on github: <a href="https://github.com/jboussouf/Overcoming-Speech-Recognition-Challenges-with-GAN-based-Solutions">jboussouf/Overcoming-Speech-Recognition-Challenges-with-GAN-based-Solutions</a>

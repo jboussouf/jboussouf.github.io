@@ -1,73 +1,70 @@
 ---
-title: "Overcoming Speech Recognition Challenges with GAN based Solutions"
-excerpt: "This study applies deep learning techniques to improve speech recognition in different environments, including noisy situations. The study presents the results of a Convolutional Neural Network (CNN) model that achieved high accuracy in recognizing spoken words in clean audio data but struggled as noise levels increased. <br/><img src='/images/GAN.png'>"
+title: "Advancing Diabetic Retinopathy Detection: Fine-Tuning VIT Models"
+excerpt: "This work focuses on advancing the detection of diabetic retinopathy through the implementation of Vision Transformer (ViT) models, as state-of-the-art deep learning approach to computer vision.<br/><img src='/images/Retinopathy.png'>"
 collection: portfolio
 ---
 
-This study applies deep learning techniques to improve speech recognition in different environments, including noisy situations. The study presents the results of a Convolutional Neural Network (CNN) model that achieved high accuracy in recognizing spoken words in clean audio data but struggled as noise levels increased. An attempt to use a simple autoencoder to remove noise from the audio data resulted in a significant decline in classification performance, indicating the need for more advanced denoising techniques. The study proposes the Speech enhancement Generative Adversarial Network (SEGAN) as a solution to improve speech recognition's robustness by generating clean speech signals from noisy inputs. The results demonstrate the potential of deep learning techniques in improving speech recognition technology, but careful evaluation of various components and techniques is crucial for optimal performance.<br/><img src='/images/GAN.png'>
+This work focuses on advancing the detection of diabetic retinopathy through the implementation of Vision Transformer (ViT) models, a state-of-the-art deep learning approach to computer vision. The system automates the identification of levels of diabetic retinopathy by classifying retinal images into three categories. The ViT model is meticulously trained on a large dataset of retinal images from Kaggle (available at <a href="https://www.kaggle.com/datasets/amanneo/diabetic-retinopathy-resized-arranged">amanneo/diabetic-retinopathy-resized-arranged</a>).
 
-<h2>Data Presentation</h2>
+<br/><img src='/images/Retinopathy.png'>
 
-In this project, we introduce a meticulously curated dataset that serves as the backbone for tackling the Speech Recognition Challenges using GAN-based solutions. The dataset comprises WAV audio files, each precisely one second in length, making it a perfect fit for training and evaluating speech recognition models. Our carefully selected dataset is sourced from Kaggle and is openly available to the research community at the following URL: <a href="https://www.kaggle.com/datasets/wangshaoqi/speech-commands">wangshaoqi/speech-commands</a>. 
+<h2>Data PreProcessing</h2>
 
-This dataset is a valuable resource for anyone looking to delve into the fascinating domain of speech recognition and explore the potential of Generative Adversarial Networks (GANs) for enhancing speech processing systems. With diverse audio samples representing various speech commands, our dataset promises to foster innovative and robust advancements in the field of automatic speech recognition.
+In order to simplify the classification task and streamline the analysis process, the original dataset, consisting of five classes based on the severity of diabetic retinopathy, has been transformed into three classes. The new class structure is as follows:
 
-In this project, we have chosen to work with just three words: "one," "two," and "three." These carefully selected words represent essential phonetic elements and will simplify the initial stages of training and evaluation.
+<ul>
+    <li>0 - No DR : This class remains unchanged and represents images of eyes without any signs of diabetic retinopathy</li>
+    <li>1 - Mild : This class combines the original "Mild" and "Moderate" classes. Images in this class exhibit mild to moderate signs of diabetic retinopathy, representing the initial and intermediate stages of the condition</li>
+    <li>2 - Proliferative : This class combines the original "Severe" and "Proliferative DR" classes. Images in this class depict severe manifestations of diabetic retinopathy, indicating an advanced stage of the disease and the potential for vision loss.</li>
+</ul>
+Distribution of the Dataset after compression:
+<img src='/images/Tsne_visualization.png'>
 
-<h2>Data Transformation</h2>
+<h2>Fine-Tune VIT for Diabetic Retinopathy problem</h2>
+Fine-tuning is a powerful technique in machine learning that involves taking a pre-trained model and adapting it to a specific task or dataset. It is particularly useful when working with limited labeled data or when aiming to achieve high performance on a specialized task. The process of fine-tuning typically involves two main steps : initializing the pre-trained model with its learned weights and then updating these weights by training on the new task-specific dataset.
 
-In addition to transforming the audio data into spectrogram format, we will augment the dataset by introducing random noise at different levels. Data augmentation is a powerful technique that helps improve the robustness and generalization of our models. By injecting random noise into the audio samples at varying intensities, we simulate real-world environmental factors and add variability to the training data. This approach allows our models to become more resilient to noise and other distortions commonly encountered in practical speech recognition scenarios. 
+<h2>VIT Result</h2>
+During the fine-tuning process of the Vision Transformer (VIT) model for Diabetic Retinopathy, we observed a remarkable trend in the history of loss. As the model iteratively learned from the task-specific dataset, the loss consistently decreased with each training epoch. This decline in loss indicates that the model successfully minimized the difference between its predicted outputs and the ground truth labels, moving closer to accurate predictions.
 
-Spectrogram format of bowth data with noise and without noise:
-<br/><img src='/images/data_noise_without_noise.png'>
+Loss of VIT fine-tuning:
+<img src='/images/histLoss_of_the_VIT_model.png'>
 
-<h2>Classification Model</h2>
+The fine-tuned Vision Transformer (VIT) model exhibited an exceptional performance during training, as evident from the history of accuracy. Throughout the training process, the model consistently achieved an accuracy of over 97% on the task-specific dataset. This high accuracy was a testament to the efficacy of fine-tuning and the ability of the VIT model to discern relevant features for Diabetic Retinopathy classification. The consistently high accuracy demonstrated the model’s robustness and generalization capabilities, implying that it could
+accurately classify unseen retinal images with a high level of confidence.
 
-For our speech recognition task, we employed a Convolutional Neural Network (CNN) architecture. The model architecture consists of multiple convolutional layers, each followed by max-pooling layers to downsample the spatial dimensions of the feature maps. The first two convolutional layers have 128 filters, while the subsequent two have 64 filters. The final convolutional layer has 32 filters before flattening the output to connect to a fully connected (dense) layer with three neurons, representing the three target classes "one," "two," and "three." The model has a total of 543,747 trainable parameters, making it an efficient choice for our speech recognition task. By training this CNN architecture on the transformed spectrogram data enriched with random noise, we aim to develop robust GAN-based solutions for accurate and efficient speech recognition.
+Accuracy of VIT fine-tuning:
+<img src='/images/histAccuracy_of_the_VIT_model.png'>
 
-CNN architecture:
-<br/><img src='/images/cnn_architect.png'>
+After fine-tuning the Vision Transformer (VIT) model for Diabetic Retinopathy, we evaluated its performance on an independent testing dataset. The confusion matrix provided a comprehensive breakdown of the model’s predictions across different severity classes of Diabetic Retinopathy. It revealed the distribution of true positive, true negative, false positive, and false negative predictions, allowing us to assess the model’s performance comprehensively. By examining the confusion matrix, we could identify potential areas of misclassification and
+gain insights into the model’s strengths and weaknesses. The confusion matrix acted as a valuable diagnostic tool, guiding us in further fine-tuning the model to optimize its accuracy and specificity for different severity levels.
 
-The loss nad accuracy of the CNN Model:
-<div style="display: flex;">
-  <div style="width: 50%; height: auto; margin: 10px;"><br/><img src='/images/loss_cnn_SEGAN.png'></div>
-  <div style="width: 50%; height: auto; margin: 10px;"><img src='/images/accur_cnn_SEGAN.png'>
-</div>
-</div>
+Confusion Matrix on Test dataset using VIT:
+<img src='/images/Confusion_Matrix_VIT.png'>
 
-<h2>CNN Evaluation</h2>
-when we systematically introduce noise effects to the data during testing, we observe a decline in the model's performance. The noise, which can be in the form of random perturbations, distortions, or other modifications to the data, adversely affects the CNN's ability to discern meaningful patterns and features in the input. As a result, the accuracy and overall effectiveness of the model in classifying the data diminish, leading to lower evaluation scores on the performance chart. This highlights the sensitivity of the CNN to noise and underscores the need for robustness and noise-resistant techniques in real-world applications.
+<h2>Model Deployment</h2>
 
-CNN Evaluation:
-<br/><img src='/images/model evaluation.png'>
+The model is integrated into a web application using Flask as the web framework. Flask facilitates handling HTTP requests and responses, providing a smooth communication channel between the front-end and back-end components. The front-end of the application is
+developed using web technologies such as HTML, CSS, and JS.
 
-<h2>Autoencoder</h2>
+The web application interface consists of a user-friendly layout with two distinct zones dedicated to image selections : the "Right" and "Left" eye image zones. The design prioritizes simplicity and intuitiveness, allowing users to effortlessly upload or choose images for each eye. 
 
+Once the user clicks on the "Predict" button, the web application initiates the image uploading process, securely transferring the selected "Right" and "Left" eye images to the server for analysis. The server, equipped with powerful image processing VIT_fine_tuned model, Once the prediction process is complete, the web application redirects the user to a new page displaying the results.
 
-We employ an autoencoder architecture based on a Convolutional Neural Network (CNN) with a two-part structure, consisting of an encoder and a decoder, seamlessly connected through a bottleneck layer. The encoder efficiently compresses the input data into a lower-dimensional representation, while the decoder reconstructs the original data from this compressed representation. By leveraging the bottleneck layer, we ensure that only the most salient features are preserved, leading to more effective feature extraction. Additionally, we introduce skip connections between convolutional layers to facilitate the flow of information from earlier layers to later ones. 
+The "Prediction Page" is designed to showcase the uploaded images alongside the insightful predictions made by the VIT model. The predictions are presented in an easily interpretable format, such as a labeled classification result or a confidence score for each image. Additionally, visual representations like heatmaps or highlighted areas further assist the user in understanding how the model arrived at its conclusions.
 
-Autoencoder architect:
-<br/><img src='/images/Autoencoder.png'>
+Web_App interface:
+<img src='/images/with_images.png'>
 
-<h2>Autoencoder results</h2>
-When employing autoencoders, a type of neural network used for unsupervised learning and data compression, suboptimal outcomes may arise if the generated data lacks clarity. This deficiency in clarity could lead to a diminished reconstruction quality of the original input samples, thereby adversely affecting subsequent tasks. In contrast, Convolutional Neural Networks (CNNs) tend to yield superior results in such situations.
+Results of the Model:
+<img src='/images/pridection.png'>
 
-Autoencoder results:
-<br/><img src='/images/auto_encoder_resoult.png'>
+Important Note : If the subtraction between the predicted results for the "Right" and "Left" eye images yields a percentage of evaluation that is under 0.1 (i.e., less than 10% difference), the user will receive the following message : "We hope that you will see a specialized ophthalmologist due to the inability of the model to extract sufficient information".
 
-<h2>SEGAN architecture</h2>
+The note in case of eval1 - eval2 < 0.1:
 
-In the GAN architecture, three main components play crucial roles. Firstly, an autoencoder is incorporated into our architecture to serve as the generator. Its purpose is to attempt noise removal from the audios, refining the data for subsequent stages. Secondly, the discriminator comes into play, responsible for distinguishing between the generated data and real data. It evaluates the input and provides a verdict on whether the data is authentic or counterfeit. Finally, the dataset serves as the third essential element, utilized by the discriminator to make accurate judgments regarding the authenticity of the data, ultimately shaping the overall performance and effectiveness of the GAN model.
+<img src='/images/doctor.png'>
 
-SEGAN architect:
-<br/><img src='/images/SEGAN.png'>
+<h2> Concludion </h2>
+In conclusion, the fine-tuning process of the VIT model for Diabetic Retinopathy yielded impressive results. The history of loss consistently decreasing to 0.0005 demonstrated the model’s effective learning and ability to capture essential visual features specific to the task. Moreover, the history of accuracy consistently surpassing 0.97 showcased the model’s remarkable generalization and high-level performance. Finally, the confusion matrix on the testing dataset provided a detailed analysis of the model’s predictions, allowing for the identification of potential areas for improvement. Altogether, these results indicate the immense potential of the fine-tuned VIT model in aiding the medical community with accurate and reliable Diabetic Retinopathy diagnosis.
 
-<h2>SEGAN results</h2>
-
-In the process of model evaluation, the effectiveness of the autoencoder trained within the GAN architecture becomes evident from the following figure. Notably, when subjected to 5000 units of noise, the CNN model achieves a modest accuracy of 40%. However, upon utilizing the Autoencoder to remove the noise from the data, its performance improves significantly to a commendable 60%. It is worth noting that the CNN model outperforms the Autoencoder in scenarios where no noise is applied, achieving an impressive accuracy of 82%, while the Autoencoder yields a respectable 75%. This comparative analysis underscores the autoencoder's capability in noise reduction, thereby enhancing the CNN model's accuracy in the presence of noise, while also highlighting the CNN's inherent strength in noise-free conditions.
-
-SEGAN results:
-<br/><img src='/images/auto_Noise.png'>
-
-
-Project URL on github: <a href="https://github.com/jboussouf/Overcoming-Speech-Recognition-Challenges-with-GAN-based-Solutions">jboussouf/Overcoming-Speech-Recognition-Challenges-with-GAN-based-Solutions</a>
+Project URL on github: <a href="https://github.com/jboussouf/Advancing-Diabetic-Retinopathy-Detection-for-Enhanced-Eye-Health">Advancing Diabetic Retinopathy Detection: Fine-Tuning VIT Models</a>
