@@ -19,8 +19,21 @@ redirect_from:
 
 
 
-Communications
+Communications & Publications
 ======
+
+<div style="display: flex;">
+  <div style="width: 70%; height: auto; margin: 10px; font-weight: bold;">IOTA TANGLE 2.0: AN OVERVIEW<br><span style="font-size: 12px;">The EDP Audit, Control, and Security Newsletter</span></div>
+  <div style="width: 30%; height: auto; margin: 10px;">
+  <br>
+  <span style="font-size: 12px;">Oct. 23, 2022</span>
+</div>
+</div>
+
+<ul>
+  <li><a href="https://www.tandfonline.com/doi/full/10.1080/07366981.2023.2293322">Article URL: IOTA TANGLE 2.0: AN OVERVIEW</a></li>
+</ul>
+
 
 <div style="display: flex;">
   <div style="width: 70%; height: auto; margin: 10px; font-weight: bold;">Signing Algorithms Behind Blockchain Digital Transactions<br><span style="font-size: 12px;">MASI</span></div>
@@ -33,7 +46,6 @@ Communications
 <ul>
   <li><a href="https://drive.google.com/drive/folders/1krIp5X9WD4GDSQc-1NXPieC8cYMjK9ac">Presentation AND Certificate</a></li>
 </ul>
-
 
 
 Education Career
