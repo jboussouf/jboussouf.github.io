@@ -26,7 +26,7 @@ Communications & Publications
   <div style="width: 70%; height: auto; margin: 10px; font-weight: bold;">IOTA TANGLE 2.0: AN OVERVIEW<br><span style="font-size: 12px;">The EDP Audit, Control, and Security Newsletter</span></div>
   <div style="width: 30%; height: auto; margin: 10px;">
   <br>
-  <span style="font-size: 12px;">Oct. 23, 2022</span>
+  <span style="font-size: 12px;">2023</span>
 </div>
 </div>
 
